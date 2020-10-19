@@ -70,3 +70,56 @@
       @include text($font-size: 1.6rem, $font-weight: 600, $line-height: 6rem, $color: $color-grey)
       &:hover
         color: $color-light
+
+  /*=== Mobile menu ===*/
+  .mmenu
+    display: none
+    position: absolute
+    right: 0
+    top: 3rem
+    width: 100%
+    z-index: 99
+    .slicknav_menu
+      background: transparent
+      .slicknav
+        &_nav
+          margin-top: 0
+          background: $color-light
+        &_btn
+          background: transparent
+          margin-bottom: 0
+          top: -1.7rem
+          padding: 0.5rem
+          right: 0
+          margin-top: 0
+          .slicknav_icon-bar
+            width: 2.6rem
+            background-color: $color-grey!important
+        &_open
+          .slicknav_icon-bar
+            background-color: $color-light!important
+        &_arrow
+          font-size: 2.2rem
+          font-weight: 500
+          color: $color-accent
+
+      .nav
+        &__link
+          padding: 1rem
+          @include text($font-size: 1.5rem, $line-height: 1, $color: $color-dark, $text-transform: capitalize)
+          &:hover
+            color: $color-accent
+          &--submenu
+            padding: 0.7rem 1rem
+            color: $color-dark
+          &--dropdown
+            padding: 0
+        &__submenu
+          position: static
+          width: 100%
+          margin-top: 0
+          opacity: 1
+          visibility: visible
+          padding: 0 2rem
+          margin-left: 0
+          background: $color-light
