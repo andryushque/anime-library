@@ -1,0 +1,72 @@
+.header
+  background-color: $color-dark
+  &-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .logo
+    &__text
+      display: inline-block
+      @include text($font-size: 2.6rem, $font-weight: 600, $line-height: 6rem, $color: $color-light)
+      &:last-child
+        color: $color-accent
+
+  .nav
+    &__list
+      display: flex
+      align-items: center
+    &__link
+      display: block
+      padding: 0 2rem
+      transition: color 0.5s ease
+      @include text($font-size: 1.5rem, $font-weight: 700, $line-height: 6rem, $color: $color-grey)
+      &:hover
+        color: $color-light
+      &--dropdown
+        i
+          margin-left: 0.5rem
+          font-size: 1.4rem
+      &--submenu
+        padding: 0.5rem 0
+        transition: color 0.5s ease
+        @include text($font-size: 1.4rem, $line-height: 1, $color: $color-dark)
+        &:hover
+          color: $color-accent
+      &--active
+        background-color: $color-accent
+        color: $color-light
+
+    &__item
+      margin-right: 1.6rem
+      &--dropdown
+        position: relative
+        &:hover
+          // open submenu
+          .nav__submenu
+            margin-top: 0
+            opacity: 1
+            visibility: visible
+
+    &__submenu
+      position: absolute
+      top: 6rem
+      left: 2rem
+      z-index: 10
+      min-width: 17rem
+      margin-top: 2rem
+      opacity: 0
+      visibility: hidden
+      padding: 2rem
+      background-color: $color-light
+      transition: margin-top 0.4s ease, opacity 0.4s ease, visibility 0.4s ease
+
+  &-links
+    display: flex
+    align-items: center
+    &__link
+      margin-left: 1.6rem
+      transition: color 0.5s ease
+      @include text($font-size: 1.6rem, $font-weight: 600, $line-height: 6rem, $color: $color-grey)
+      &:hover
+        color: $color-light
