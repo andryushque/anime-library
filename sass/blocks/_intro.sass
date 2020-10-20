@@ -1,0 +1,75 @@
+.intro
+  padding-top: 5rem
+  &-wrapper
+    position: relative
+    background: url(../img/intro/intro-bg.jpg) center center no-repeat
+    background-size: cover
+    padding: 0 3rem
+    margin: 0 3rem
+  &__item
+    position: relative
+    z-index: 1
+    padding: 25rem 3rem 5rem
+
+  &__tag
+    display: inline-block
+    margin-bottom: 3.5rem
+    padding: 0 1rem
+    background-color: $color-light
+    @include text($font-size: 1.3rem, $line-height: 2, $color: $color-accent, $text-transform: capitalize)
+  &__title
+    margin-bottom: 1rem
+    @include title($font-size: 4.2rem, $font-weight: 700, $text-transform: capitalize)
+  &__text
+    margin-bottom: 4rem
+    @include text()
+  &__button
+    letter-spacing: 2px
+    @include text($font-size: 1.3rem, $line-height: 1, $font-weight: 700, $text-transform: uppercase)
+    &-text
+      display: inline-block
+      margin-right: 0.6rem
+      padding: 1.4rem 2rem
+      border-radius: 0.4rem 0 0 0.4rem
+      background-color: $color-accent
+      transition: margin-right 0.3s ease
+    &-icon
+      display: inline-block
+      padding: 1.4rem 0.7rem
+      border-radius: 0 0.4rem 0.4rem 0
+      background-color: $color-accent
+    &:hover
+      .intro__button-text
+        margin-right: 0
+
+  .owl-carousel .owl-nav
+    button
+      position: absolute
+      left: -3rem
+      top: calc(50% - 3rem)
+      z-index: 10
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 6rem
+      width: 6rem
+      background-color: $color-dark-bg
+      transform: rotate(45deg)
+      &.owl-next
+        left: auto
+        right: -3rem
+      span
+        display: block
+        width: 4.8rem
+        height: 4.8rem
+        background-color: #242540
+      i
+        transform: rotate(-45deg)
+        display: block
+        color: $color-light
+        line-height: 4.8rem
+        font-size: 2.4rem
+        transition: color 0.3s ease
+      &:hover
+        i
+          color: $color-accent
