@@ -19,9 +19,13 @@ $(document).ready(function () {
     nav: true,
     dots: true,
     navText: ["<span><i class='fas fa-angle-left'></i></span>", "<span><i class='fas fa-angle-right'></i></span>"],
+    animateOut: 'fadeOut',
+    animateIn: 'fadeIn',
     smartSpeed: 1200,
     autoHeight: false,
     autoplay: true,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true, 
     mouseDrag: false
   });
 });
