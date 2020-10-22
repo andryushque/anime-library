@@ -72,3 +72,14 @@
       font-size: 4.4rem
     &__text
       font-size: 2.2rem
+
+  .blog
+    padding: 5rem 0 7rem
+    &-wrapper
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(6, 34.5rem)
+      grid-auto-rows: 34.5rem
+    &__item
+      &:nth-child(3n - 2)
+        grid-row: span 1
+        grid-column: span 1
