@@ -28,4 +28,11 @@ $(document).ready(function () {
     autoplayHoverPause: true, 
     mouseDrag: false
   });
+
+  /*=== 03. To Top Button ===*/
+  const topButton = $(".top-button");
+  topButton.on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, "500");
+  });
 });

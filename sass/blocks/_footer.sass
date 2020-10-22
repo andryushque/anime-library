@@ -1,0 +1,70 @@
+.footer
+  padding: 6rem 0 4rem
+  background-color: $color-dark
+  &-wrapper
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
+  .logo
+    display: block
+    width: 20%
+    &__text
+      display: inline-block
+      @include text($font-size: 2.6rem, $font-weight: 600, $line-height: 1, $color: $color-light)
+      &:last-child
+        color: $color-accent
+
+  &__list
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 40%
+  &__list-item
+    margin: 0 1rem
+  &__list-link
+    transition: color 0.5s ease
+    @include text($font-size: 1.5rem, $font-weight: 700, $line-height: 1.5, $color: $color-grey)
+    &:hover
+      color: $color-light
+
+  .copyright
+    width: 20%
+    &__text
+      @include text($font-size: 1.4rem, $color: #3d3d3d)
+    &__icon
+      margin: 0 0.5rem
+      font-size: 1.6rem
+      color: $color-accent
+    &__link
+      display: inline-block
+      margin-left: 0.5rem
+      color: $color-accent
+      transition: color 0.5s ease
+      &:hover
+        color: $color-light
+
+  /*=== Top Button ===*/
+  .top-button
+    position: absolute
+    top: -8.5rem
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 10
+    width: 5rem
+    height: 5rem
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: $color-accent
+    cursor: pointer
+    &__icon
+      font-size: 2.2rem
+      color: $color-light
+      transition: color .5s ease
+    &:hover
+      .top-button__icon
+        color: $color-grey
