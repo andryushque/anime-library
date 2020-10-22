@@ -29,7 +29,18 @@ $(document).ready(function () {
     mouseDrag: false
   });
 
-  /*=== 03. To Top Button ===*/
+  /*=== 03. Sidebar tabs ===*/
+  const filterTab = $("[data-filter]");
+  filterTab.on("click", function (event) {
+    event.preventDefault();
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+  if ($(".sidebar__items").length > 0) {
+    const containerEl = document.querySelector(".sidebar__items");
+    const mixer = mixitup(containerEl);
+  }
+
+  /*=== 04. To Top Button ===*/
   const topButton = $(".top-button");
   topButton.on("click", function (e) {
     e.preventDefault();
